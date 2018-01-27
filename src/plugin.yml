@@ -1,0 +1,46 @@
+name: TeamColor
+version: 1.0
+author: Goofables
+main: us.matrixcraft.goofables.TeamColor.TeamColor
+description: Vanilla Team Chat Colors
+commands:
+  teamcolor:
+    description: Main TeamColor command
+    permission: teamcolor.command
+    permission-message: You do not have <permission>
+    usage: |
+      §a< === Team Color Help === >
+      §a/<command> enable
+      §a/<command> disable
+      §a/<command> show
+      §a/<command> prefix [prefix]
+      §a/<command> suffix [suffix]
+permissions:
+  teamcolor.*:
+    description: All permissions for teamcolor
+    default: op
+    children:
+      teamcolor.command: true
+      teamcolor.enable: true
+      teamcolor.disable: true
+      teamcolor.prefix: true
+      teamcolor.suffix: true
+      teamcolor.show: true
+  teamcolor.command:
+     description: Required for use of use of /teamcolor
+     default: op
+  teamcolor.enable:
+     description: Required for use of use of /teamcolor enable
+     default: op
+  teamcolor.disable:
+     description: Required for use of use of /teamcolor disable
+     default: op
+  teamcolor.prefix:
+     description: Required for use of use of /teamcolor prefix [prefix]
+     default: op
+  teamcolor.suffix:
+     description: Required for use of use of /teamcolor suffix [suffix]
+     default: op
+  teamcolor.show:
+     description: Required for use of use of /teamcolor show
+     default: op
