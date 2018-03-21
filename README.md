@@ -7,6 +7,7 @@ Vanilla Team Chat Colors
 /teamcolor show  
 /teamcolor prefix [prefix]  
 /teamcolor suffix [suffix]  
+/color
 
 # Permissions:
 teamcolor.enable  
