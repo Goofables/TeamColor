@@ -1,5 +1,5 @@
 name: TeamColor
-version: 1.0
+version: 1.2
 author: Goofables
 main: us.matrixcraft.goofables.TeamColor.TeamColor
 description: Vanilla Team Chat Colors
@@ -15,6 +15,12 @@ commands:
       §a/<command> show
       §a/<command> prefix [prefix]
       §a/<command> suffix [suffix]
+  colors:
+    description: List all colorcodes
+    permission: teamcolor.colors
+    usage: |
+      §a< Team Color Help >
+      §a/<command>
 permissions:
   teamcolor.*:
     description: All permissions for teamcolor
