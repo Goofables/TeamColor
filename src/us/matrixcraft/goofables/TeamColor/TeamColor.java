@@ -103,7 +103,7 @@ public class TeamColor extends JavaPlugin implements Listener {
                             if (team.getSuffix().isEmpty()) team.setSuffix("§r");
                         } else team.setSuffix(s);
                         sender.sendMessage(GREEN + ((pre)?"Prefix":"Suffix") + " for team " + team.getDisplayName() +
-                                                   " changed to `" + s.replace(COLOR_CHAR, USER_CHAR) + "`!");
+                                " changed to `" + s.replace(COLOR_CHAR, USER_CHAR) + "`!");
                     } else sender.sendMessage(RED + "Error! String is longer than 16 characters!");
                 }
             }
@@ -146,15 +146,15 @@ public class TeamColor extends JavaPlugin implements Listener {
     private void updateName(Player player) {
         if (disabled) return;
         Team team = getTeam(player);
-        player.setDisplayName(
-                ((team == null)?RESET:team.getPrefix()) + player.getName() + ((team == null)?RESET:team.getSuffix()));
+        player.setDisplayName(((team == null)?RESET:team.getColor() + team.getPrefix()) + player.getName() +
+                ((team == null)?RESET:team.getSuffix() + RESET));
     }
     
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        return (command != mainCommand || args.length > 1)?Collections.emptyList():
-                (mainArgs0.stream().filter(str -> str.toLowerCase().startsWith(
-                        (args.length == 0)?"":args[0].toLowerCase())).collect(Collectors.toList()));
+        return (command != mainCommand || args.length > 1)?Collections.emptyList():(mainArgs0.stream().filter(
+                str -> str.toLowerCase().startsWith((args.length == 0)?"":args[0].toLowerCase())).collect(
+                Collectors.toList()));
     }
 }
 
