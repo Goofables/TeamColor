@@ -1,7 +1,7 @@
 name: TeamColor
 version: 1.2
 author: Goofables
-main: us.matrixcraft.goofables.TeamColor.TeamColor
+main: us.matrixcraft.TeamColor.TeamColor
 description: Vanilla Team Chat Colors
 commands:
   teamcolor:
