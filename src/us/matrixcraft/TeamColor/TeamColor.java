@@ -1,4 +1,4 @@
-package us.matrixcraft.goofables.TeamColor;
+package us.matrixcraft.TeamColor;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
